@@ -57,7 +57,12 @@ def isort(text_range):
     if using_bytes:
         old_text = old_text.decode('utf-8')
 
-    new_text = SortImports(file_contents=old_text).output
+    new_text = SortImports(
+        file_contents=old_text,
+        settings_path="~/.editorconfig",
+        multi_line_output=3,
+        include_trailing_comma=True,
+    ).output
 
     if using_bytes:
         new_text = new_text.encode('utf-8')
