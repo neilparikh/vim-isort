@@ -82,3 +82,5 @@ def isort_visual():
     isort(vim.current.range)
 
 EOF
+
+au BufWritePre *.py :Isort
