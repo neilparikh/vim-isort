@@ -60,8 +60,6 @@ def isort(text_range):
     new_text = SortImports(
         file_contents=old_text,
         settings_path="~/.editorconfig",
-        multi_line_output=3,
-        include_trailing_comma=True,
     ).output
 
     if using_bytes:
